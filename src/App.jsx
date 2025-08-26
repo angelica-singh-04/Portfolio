@@ -1,6 +1,10 @@
 import './App.css'
 import React from "react";
 import EducationCard from "./components/EducationCard";
+import HorizontalBoxes from "./components/HorizontalBoxes";
+import HorizontalSkills from "./components/HorizontalSkills";
+import Webproject  from './components/Webproject';
+import ShimmerButton from "./components/ShimmerButton";
 import photo from './assets/photo.jpeg';
 import dsce from './assets/dsce.jpeg';
 import upps from './assets/upps.jpeg';
@@ -10,6 +14,29 @@ import genesis from './assets/genesis.jpeg';
 import fk from './assets/flutterkanpur_logo.jpeg';
 import wander from './assets/wander.jpeg';
 import artizence from './assets/artizence_logo.jpeg';
+import canva from './assets/canva.svg';
+import express from './assets/express.svg';
+import figma from './assets/figma.svg';
+import javascript from './assets/javascript.svg';
+import krita from './assets/krita.svg';
+import miro from './assets/miro.svg';
+import node from './assets/nodedotjs.svg';
+import tailwindcss from './assets/tailwindcss.svg';
+import mongodb from './assets/mongodb.svg';
+import next from './assets/nextdotjs.svg';
+import react from './assets/react.svg';
+import font from './assets/font.png';
+import color from './assets/color.svg';
+import prototype from './assets/prototype.svg';
+import webflow from './assets/webflow.png';
+import wireframe from './assets/wireframe.svg';
+import photoshop from './assets/photoshop.png';
+import illustrator from './assets/illustrator.png';
+import github from './assets/github.svg';
+import project1 from './assets/project1.png';
+
+
+
 
 function App() {
 
@@ -135,12 +162,69 @@ function App() {
                   <span className="mt-2 inline-block bg-black text-white text-[10px] font-medium px-3 py-1 rounded-full mr-2 mb-2">
                     Prototyping
                   </span>
-
-
                 </div>
-                  
+
           </div>
 
+          <div className="my-4 w-full">
+                <h2 className="font-bold text-lg mb-2 w-full">My Skills</h2>
+                
+                  <div>
+                    <HorizontalBoxes
+                      items={[
+                              { image: react , text: "React" },
+                              { image: next , text: "Next.js" },
+                              { image: node , text: "Node.js" },
+                              { image: tailwindcss , text: "Tailwind CSS" },
+                              { image: javascript , text: "Javascript" },
+                              { image: mongodb , text: "MongoDb " },
+                              { image: express , text: "Express.js" },
+                              { image: github, text: "Github" },
+                              { image: react, text: "React" },
+                              { image: next, text: "Next.js" },
+                            ]}
+                      speed={10}
+                      boxColor="bg-[rgba(243,244,246,0.5)]"
+                      boxSize="w-30 h-10"
+                      boxClass="text-black font-regular text-xs border border-gray-200"
+                    />
+                    <HorizontalSkills
+                      items={[
+                              { image: wireframe , text: "Wireframing" },
+                              { image: prototype , text: "Prototyping" },
+                              { image: font , text: "Typography" },
+                              { image: color , text: "Color Theory" },
+                              { image: illustrator , text: "Illustrator" },
+                              { image: photoshop , text: "Photoshop" },
+                              { image: canva , text: "Canva" },
+                              { image: miro , text: "Miro" },
+                              { image: figma , text: "Figma" },
+                              { image: webflow , text: "Webflow" },
+                              { image: krita , text: "Krita" },
+                      ]}
+                      speed={10}
+                      boxColor="bg-[rgba(243,244,246,0.5)]"
+                      boxSize="w-30 h-10"
+                      boxClass="text-black font-regular text-xs border border-gray-200"
+                      reverse={true}
+                    />
+
+                  </div>                  
+          </div>
+
+          <div className='w-full'>
+            <Webproject 
+            img={project1}
+            duration={"Jan 2023 - June 2023"}
+            description={"It is my personal web redesign project of Codeforces, where I focused on creating a clean and modern interface with an organized contest dashboard, searchable problem sets, enhanced user profiles with ratings, and interactive community forums."}
+            name={"Codeforces Web-Redesign"}
+            />
+            <ShimmerButton
+        text="View Projects"
+        className="bg-blue-600 hover:bg-blue-700"
+        onClick={() => alert("Button Clicked!")}
+      />
+          </div>
       </div>
     </div>
    
