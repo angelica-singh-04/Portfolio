@@ -4,7 +4,7 @@ const ShimmerButton = ({ text = "Click Me", onClick, className = "" }) => {
   return (
     <button
       onClick={onClick}
-      className={`relative overflow-hidden px-6 py-3 font-medium text-white bg-black rounded-lg shadow-md hover:shadow-lg transition-all duration-300 ${className}`}
+      className={`relative overflow-hidden px-5 py-2 font-xs text-xs text-white bg-blue-600 rounded-md shadow-md hover:shadow-lg transition-all duration-300 ${className}`}
     >
       <span className="relative z-10">{text}</span>
 
