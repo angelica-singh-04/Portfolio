@@ -1,5 +1,5 @@
 import React from "react";
-import Bullet from "./bullet";
+import Bullet from "./Bullet";
 
 
 const Webproject = ({ img, name, duration, description, btn,}) => {
