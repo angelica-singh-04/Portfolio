@@ -39,7 +39,7 @@ import project2 from './assets/Screen.png';
 import project3 from './assets/Start.png';
 import project4  from './assets/project4.png';
 import comingsoon  from './assets/comingsoon.png';
-import LazyTrunk  from './assets/lazytrunk.jpg';
+import LazyTrunk  from './assets/Lazytrunk.jpg';
 import place1 from './assets/1st-place.svg'
 import place2 from './assets/2nd-place.svg'
 import Achievements from './components/Achievment';
