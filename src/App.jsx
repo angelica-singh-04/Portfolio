@@ -58,7 +58,7 @@ import mode from './assets/mode.png'
 import as from './assets/AS.png'
 
 function App() {
-  const [darkMode, setDarkMode] = useState(true);
+  const [darkMode, setDarkMode] = useState(false);
 
   const toggleMode = () => setDarkMode(!darkMode);
 
@@ -67,7 +67,7 @@ function App() {
   <div className={darkMode ? "bg-[#0a0a0a] flex items-center justify-center text-white min-h-screen font-[Inter]" : "bg-white text-black min-h-screen font-[Inter] flex items-center justify-center"}>
       <div className="w-1/2 flex flex-col items-start text-left">
         <span className="text-5xl font-bold mb-3 mt-50">Hi, I'm <span className='text-blue-500'>Angelica</span></span>
-        <h4 className="text-md text-gray-500 font-regular">UI/UX & Graphic Designer, Full-Stack Developer. Always exploring creativity through tech.</h4>
+        <h4 className="text-md text-gray-500 font-regular ">UI/UX & Graphic Designer, Full-Stack Developer. Always exploring creativity through tech.</h4>
         <div className="mt-4 mb-6">
               <img
                 src={photo}
@@ -460,7 +460,7 @@ function App() {
 
 <nav
         className={`fixed top-10 w-82 h-15 shadow-lg flex flex-row items-center justify-center py-3 rounded-full border border-gray-200 ${
-          darkMode ? "bg-black text-white" : "bg-white text-black"
+          darkMode ? "bg-[#091920] text-white border border-blue-200" : "bg-white text-black border border-blue-200"
         }`}
       >
         <div className="mr-5 text-xl font-bold flex items-center justify-center">
