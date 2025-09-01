@@ -8,7 +8,7 @@ const BlogCard = ({ img, title, description, link, duration }) => {
       <div className="relative group">
         <img
           src={img}
-          className="h-[150px] w-full object-cover rounded-lg" // fixed invalid h-38
+          className="h-[150px] w-full object-cover rounded-lg  border border-gray-200" // fixed invalid h-38
           alt="Blog_image"
         />
         {/* Figma icon link (only on hover) */}

@@ -3,6 +3,7 @@ import React from "react";
 const ShimmerButton = ({ text = "Click Me", onClick, className = "" }) => {
   return (
     <button
+    type="button"
       onClick={onClick}
       className={`relative overflow-hidden px-5 py-2 font-xs text-xs text-white bg-blue-600 rounded-md shadow-md hover:shadow-lg transition-all duration-300 ${className}`}
     >
