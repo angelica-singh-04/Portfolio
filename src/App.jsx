@@ -469,7 +469,7 @@ function App() {
 
 {[
   { icon: home, href: "#about", label: "Home" },
-  { icon: resume, href: "https://drive.google.com/file/d/1KJwagfc7XUZrkHJoilpqz9PkbhmbeT6g/view?usp=sharing", label: "Resume" },
+  { icon: resume, href: "https://drive.google.com/file/d/1nk1E1H2zGWcLJpu0P0i2Qb5cLRrru3PE/view?usp=sharing", label: "Resume" },
   { icon: dribble, href: "https://dribbble.com/angelica__2004", label: "Dribbble" },
   { icon: git, href: "https://github.com/angelica-singh-04", label: "GitHub" },
   { icon: linkedin_link, href: "https://www.linkedin.com/in/angelica-singh-960079291/", label: "Linkedin" },
