@@ -15,7 +15,7 @@ const Webproject = ({ img, name, duration, description, btn, list = [] }) => {
         <span className="font-semibold text-sm sm:text-base">{name}</span>
         <span className="font-medium text-xs text-gray-500 mt-1">{duration}</span>
         <Bullet list={list} />
-        <span className="font-regular text-xs sm:text-sm my-3 text-gray-600 leading-relaxed">
+        <span className="font-regular text-xs sm:text-sm my-1 text-gray-600 leading-relaxed">
           {description}
         </span>
         <div className="mt-auto">{btn}</div>

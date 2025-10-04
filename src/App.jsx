@@ -64,7 +64,7 @@ function App() {
 
   return (
     <div className={darkMode ? "bg-[#0a0a0a] flex items-center justify-center text-white min-h-screen font-[Inter]" : "bg-white text-black min-h-screen font-[Inter] flex items-center justify-center"}>
-      <div className="w-full max-w-2xl lg:max-w-3xl flex flex-col items-start text-left px-4 sm:px-6 md:px-8 lg:px-12 overflow-auto pb-24">
+      <div className="w-full max-w-2xl lg:max-w-3xl mt-40  flex flex-col items-start text-left px-4 sm:px-6 md:px-8 lg:px-12 overflow-auto pb-24">
         <span className="text-3xl sm:text-4xl md:text-5xl font-bold mb-3 mt-20 sm:mt-24 md:mt-28">
           Hi, I'm <span className='text-blue-500'>Angelica</span>
         </span>
@@ -144,7 +144,7 @@ function App() {
               course="UI/UX Designer"
               duration="Aug'25 - Current"
             />
-            <p className='text-xs sm:text-sm text-gray-600 ml-4 sm:ml-16'><b>At Lazy Trunk</b>, I work on designing and improving the company’s websites, with a focus on clean, user-friendly, and visually engaging interfaces. I create intuitive UI/UX designs that make interactions seamless across platforms and also contribute to mobile app web design, ensuring responsive and consistent experiences on smaller screens.</p>
+            <p className='text-xs sm:text-sm text-gray-600 ml-4 sm:ml-16'><b>At Lazy Trunk,</b> I work on designing and enhancing mobile game apps, focusing on creating fun, engaging, and intuitive user experiences. I design UI/UX for various party games, ensuring visually consistent and interactive interfaces that make gameplay enjoyable and seamless across devices.</p>
             <div className="flex flex-wrap mt-2 ml-4 sm:ml-16">
               <span className="inline-block bg-black text-white text-[10px] font-medium px-3 py-1 rounded-full mr-2 mb-2">
                 Figma
@@ -358,7 +358,7 @@ function App() {
 
           </div>
         </div>
-
+<h2 className="font-bold text-base sm:text-lg mb-2 w-full">Web Development Projects</h2>
         <div className="text-center flex flex-col items-center py-8">
           <img
             src={comingsoon}
@@ -396,7 +396,7 @@ function App() {
             <BlogCard
               img={ola}
               title="Ola App-Redesign"
-              description="A complete redesign of the Ola app with a modern UI and improved user experience, making ride booking simpler, faster, and more engaging."
+              description="A complete redesign of the Ola app with a modern UI and improved user experience, making ride booking simpler & faster."
               link={<ShimmerButton
                 text="Work in Progress"
                 className="bg-gray-400 cursor-not-allowed my-3"
@@ -410,8 +410,9 @@ function App() {
 
         <div className="mt-10 sm:mt-12 md:mt-15 bg-white text-gray-800 py-6 sm:py-8 px-4 sm:px-6 flex flex-col items-center rounded-lg w-full">
           <h2 className="text-base sm:text-lg md:text-xl font-bold mb-2">Let's Connect</h2>
-          <p className="text-xs sm:text-sm text-center max-w-md">
-            Open to freelance projects, internships, and collaborations. Drop me a message!
+          <p className="text-xs mb-2 text-gray-600 sm:text-sm text-center max-w-md">
+            Open to freelance projects, internships, and collaborations. Dro
+            p me a message!
           </p>
           <Form
           />
@@ -476,14 +477,14 @@ function App() {
         </div>
 
         {[
-          { icon: home, href: "#about", label: "Home" },
+          { icon: home, href: "./", label: "Home" }, // Remove isActive prop
           { icon: resume, href: "https://drive.google.com/file/d/1nk1E1H2zGWcLJpu0P0i2Qb5cLRrru3PE/view?usp=sharing", label: "Resume" },
           { icon: dribble, href: "https://dribbble.com/angelica__2004", label: "Dribbble" },
           { icon: git, href: "https://github.com/angelica-singh-04", label: "GitHub" },
           { icon: linkedin_link, href: "https://www.linkedin.com/in/angelica-singh-960079291/", label: "Linkedin" },
-          { icon: mode, href: "#", label: "Mode", hidden: true, onClick: toggleMode }, // hidden
+          { icon: mode, href: "#", label: "Mode", hidden: true, onClick: toggleMode },
         ]
-          .filter(item => !item.hidden) // 👈 filter out hidden ones
+          .filter(item => !item.hidden)
           .map((item, index) => (
             <a
               key={index}
@@ -494,7 +495,10 @@ function App() {
               <img
                 src={item.icon}
                 alt={item.label}
-                className={`w-3.5 h-3.5 sm:w-4 sm:h-4 md:w-5 md:h-5 ${darkMode ? "filter-white" : "filter-black"}`}
+                className={`w-3.5 h-3.5 sm:w-4 sm:h-4 md:w-5 md:h-5 ${
+                  item.label === "Home" ? '[filter:invert(24%)_sepia(85%)_saturate(2203%)_hue-rotate(214deg)_brightness(97%)_contrast(101%)]' : 
+                  darkMode ? "filter-white" : "filter-black"
+                }`}
               />
               <span className="absolute top-10 sm:top-12 md:top-14 bg-gray-800 dark:bg-gray-200 py-1 px-2 text-white dark:text-black text-[10px] sm:text-xs rounded opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 whitespace-nowrap pointer-events-none z-10">
                 {item.label}
