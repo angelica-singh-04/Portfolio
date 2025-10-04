@@ -62,24 +62,26 @@ function App() {
 
   const toggleMode = () => setDarkMode(!darkMode);
 
-
   return (
     <div className={darkMode ? "bg-[#0a0a0a] flex items-center justify-center text-white min-h-screen font-[Inter]" : "bg-white text-black min-h-screen font-[Inter] flex items-center justify-center"}>
-      <div className="w-1/2 flex flex-col items-start text-left">
-        <span className="text-5xl font-bold mb-3 mt-50">Hi, I'm <span className='text-blue-500'>Angelica</span></span>
-        <h4 className="text-md text-gray-500 font-regular ">UI/UX & Graphic Designer, Full-Stack Developer. Always exploring creativity through tech.</h4>
+      <div className="w-full max-w-2xl lg:max-w-3xl flex flex-col items-start text-left px-4 sm:px-6 md:px-8 lg:px-12 overflow-auto pb-24">
+        <span className="text-3xl sm:text-4xl md:text-5xl font-bold mb-3 mt-20 sm:mt-24 md:mt-28">
+          Hi, I'm <span className='text-blue-500'>Angelica</span>
+        </span>
+        <h4 className="text-sm sm:text-base md:text-lg text-gray-500 font-regular">
+          UI/UX & Graphic Designer, Full-Stack Developer. Always exploring creativity through tech.
+        </h4>
         <div className="mt-4 mb-6">
           <img
             src={photo}
             alt="photo"
-            className="w-24 h-24 rounded-lg shadow-lg object-cover border-0 border-black rotate-356"
+            className="w-20 h-20 sm:w-24 sm:h-24 rounded-lg shadow-lg object-cover border-0 border-black rotate-356"
           />
         </div>
 
-        <div className="my-4">
-          <h2 className="font-bold text-lg mb-2">About</h2>
-
-          <p className="text-gray-800 text-sm leading-snug">
+        <div className="my-4 w-full">
+          <h2 className="font-bold text-base sm:text-lg md:text-xl mb-2 w-full">About</h2>
+          <p className="text-gray-800 text-xs sm:text-sm md:text-base leading-relaxed">
             Currently a <b>3rd-year Information Science & Engineering</b> B.E. student at DSCE, Bangalore,
             I’m passionate about <b>turning ideas into interactive digital experiences</b>.
             As a <b>UI/UX designer</b> and <b>front-end developer</b>, I enjoy crafting beautiful and
@@ -88,7 +90,7 @@ function App() {
           </p>
         </div>
         <div className='w-full mt-5'>
-          <h2 className="font-bold text-lg mb-2 w-full">Design Projects</h2>
+          <h2 className="font-bold text-base sm:text-lg md:text-xl mb-3 w-full">Design Projects</h2>
           <Webproject
             img={project1}
             duration={"Jan 2025"}
@@ -134,7 +136,7 @@ function App() {
         </div>
 
         <div className="my-6 w-full">
-          <h2 className="font-bold text-lg mb-2 w-full">Work Experince</h2>
+          <h2 className="font-bold text-base sm:text-lg mb-2 w-full">Work Experince</h2>
           <div>
             <EducationCard
               logo={LazyTrunk}
@@ -142,25 +144,27 @@ function App() {
               course="UI/UX Designer"
               duration="Aug'25 - Current"
             />
-            <p className='text-xs text-gray-600 ml-16'><b>At Lazy Trunk</b>, I work on designing and improving the company’s websites, with a focus on clean, user-friendly, and visually engaging interfaces. I create intuitive UI/UX designs that make interactions seamless across platforms and also contribute to mobile app web design, ensuring responsive and consistent experiences on smaller screens.</p>
-            <span className="mt-2 mx-16 inline-block bg-black text-white text-[10px] font-medium px-3 py-1 rounded-full mr-2 mb-2">
-              Figma
-            </span>
-            <span className="mt-2 inline-block bg-black text-white text-[10px] font-medium px-3 py-1 rounded-full mr-2 mb-2">
-              Canva
-            </span>
-            <span className="mt-2 inline-block bg-black text-white text-[10px] font-medium px-3 py-1 rounded-full mr-2 mb-2">
-              Wireframing
-            </span>
-            <span className="mt-2 inline-block bg-black text-white text-[10px] font-medium px-3 py-1 rounded-full mr-2 mb-2">
-              Prototyping
-            </span>
-            <span className="mt-2 inline-block bg-black text-white text-[10px] font-medium px-3 py-1 rounded-full mr-2 mb-2">
-              Mobile App Design
-            </span>
+            <p className='text-xs sm:text-sm text-gray-600 ml-4 sm:ml-16'><b>At Lazy Trunk</b>, I work on designing and improving the company’s websites, with a focus on clean, user-friendly, and visually engaging interfaces. I create intuitive UI/UX designs that make interactions seamless across platforms and also contribute to mobile app web design, ensuring responsive and consistent experiences on smaller screens.</p>
+            <div className="flex flex-wrap mt-2 ml-4 sm:ml-16">
+              <span className="inline-block bg-black text-white text-[10px] font-medium px-3 py-1 rounded-full mr-2 mb-2">
+                Figma
+              </span>
+              <span className="inline-block bg-black text-white text-[10px] font-medium px-3 py-1 rounded-full mr-2 mb-2">
+                Canva
+              </span>
+              <span className="inline-block bg-black text-white text-[10px] font-medium px-3 py-1 rounded-full mr-2 mb-2">
+                Wireframing
+              </span>
+              <span className="inline-block bg-black text-white text-[10px] font-medium px-3 py-1 rounded-full mr-2 mb-2">
+                Prototyping
+              </span>
+              <span className="inline-block bg-black text-white text-[10px] font-medium px-3 py-1 rounded-full mr-2 mb-2">
+                Mobile App Design
+              </span>
+            </div>
           </div>
 
-          <div className="border-t-1 border-dashed border-gray-300 my-4"></div>
+          <div className="border-t border-dashed border-gray-300 my-4"></div>
           <div>
             <EducationCard
               logo={artizence}
@@ -168,22 +172,24 @@ function App() {
               course="UI/UX Designer"
               duration="Mar'25 - Apr'25"
             />
-            <p className='text-xs text-gray-600 ml-16'><b>At Artizence</b>, I was responsible for designing websites for a diverse range of clients, focusing on creating visually appealing and user-friendly interfaces. I developed intuitive UI/UX designs that improved user engagement and ensured seamless digital experiences across different platforms.</p>
-            <span className="mt-2 mx-16 inline-block bg-black text-white text-[10px] font-medium px-3 py-1 rounded-full mr-2 mb-2">
-              Figma
-            </span>
-            <span className="mt-2 inline-block bg-black text-white text-[10px] font-medium px-3 py-1 rounded-full mr-2 mb-2">
-              Wireframing
-            </span>
-            <span className="mt-2 inline-block bg-black text-white text-[10px] font-medium px-3 py-1 rounded-full mr-2 mb-2">
-              Prototyping
-            </span>
-            <span className="mt-2 inline-block bg-black text-white text-[10px] font-medium px-3 py-1 rounded-full mr-2 mb-2">
-              Web Design
-            </span>
+            <p className='text-xs sm:text-sm text-gray-600 ml-4 sm:ml-16'><b>At Artizence</b>, I was responsible for designing websites for a diverse range of clients, focusing on creating visually appealing and user-friendly interfaces. I developed intuitive UI/UX designs that improved user engagement and ensured seamless digital experiences across different platforms.</p>
+            <div className="flex flex-wrap mt-2 ml-4 sm:ml-16">
+              <span className="inline-block bg-black text-white text-[10px] font-medium px-3 py-1 rounded-full mr-2 mb-2">
+                Figma
+              </span>
+              <span className="inline-block bg-black text-white text-[10px] font-medium px-3 py-1 rounded-full mr-2 mb-2">
+                Wireframing
+              </span>
+              <span className="inline-block bg-black text-white text-[10px] font-medium px-3 py-1 rounded-full mr-2 mb-2">
+                Prototyping
+              </span>
+              <span className="inline-block bg-black text-white text-[10px] font-medium px-3 py-1 rounded-full mr-2 mb-2">
+                Web Design
+              </span>
+            </div>
           </div>
 
-          <div className="border-t-1 border-dashed border-gray-300 my-4"></div>
+          <div className="border-t border-dashed border-gray-300 my-4"></div>
           <div>
             <EducationCard
               logo={wander}
@@ -191,34 +197,35 @@ function App() {
               course="UI/UX Designer & Graphic Designer"
               duration="Nov'24 - Jan'25"
             />
-            <p className='text-xs text-gray-600 ml-16'><b>WanderGenie</b> is an AI-powered travel platform that generates personalized itineraries to simplify trip planning. I contributed by designing <b>253</b> user-centered screens, along with wireframes, prototypes, and graphic assets in <b>Figma and Canva</b>, ensuring an intuitive design flow, engaging user experience, and a consistent brand identity across the platform and its promotional materials.</p>
-            <span className="mt-2 mx-16 inline-block bg-black text-white text-[10px] font-medium px-3 py-1 rounded-full mr-2 mb-2">
-              Figma
-            </span>
-            <span className="mt-2 inline-block bg-black text-white text-[10px] font-medium px-3 py-1 rounded-full mr-2 mb-2">
-              UI Design
-            </span>
-            <span className="mt-2 inline-block bg-black text-white text-[10px] font-medium px-3 py-1 rounded-full mr-2 mb-2">
-              Canva
-            </span>
-            <span className="mt-2 inline-block bg-black text-white text-[10px] font-medium px-3 py-1 rounded-full mr-2 mb-2">
-              Wireframing
-            </span>
-            <span className="mt-2 inline-block bg-black text-white text-[10px] font-medium px-3 py-1 rounded-full mr-2 mb-2">
-              Prototyping
-            </span>
-            <span className="mt-2 inline-block bg-black text-white text-[10px] font-medium px-3 py-1 rounded-full mr-2 mb-2">
-              Graphic Design
-            </span>
-            <span className="mt-2 inline-block bg-black text-white text-[10px] font-medium px-3 py-1 rounded-full mr-2 mb-2">
-              Miro
-            </span>
-
+            <p className='text-xs sm:text-sm text-gray-600 ml-4 sm:ml-16'><b>WanderGenie</b> is an AI-powered travel platform that generates personalized itineraries to simplify trip planning. I contributed by designing <b>253</b> user-centered screens, along with wireframes, prototypes, and graphic assets in <b>Figma and Canva</b>, ensuring an intuitive design flow, engaging user experience, and a consistent brand identity across the platform and its promotional materials.</p>
+            <div className="flex flex-wrap mt-2 ml-4 sm:ml-16">
+              <span className="inline-block bg-black text-white text-[10px] font-medium px-3 py-1 rounded-full mr-2 mb-2">
+                Figma
+              </span>
+              <span className="inline-block bg-black text-white text-[10px] font-medium px-3 py-1 rounded-full mr-2 mb-2">
+                UI Design
+              </span>
+              <span className="inline-block bg-black text-white text-[10px] font-medium px-3 py-1 rounded-full mr-2 mb-2">
+                Canva
+              </span>
+              <span className="inline-block bg-black text-white text-[10px] font-medium px-3 py-1 rounded-full mr-2 mb-2">
+                Wireframing
+              </span>
+              <span className="inline-block bg-black text-white text-[10px] font-medium px-3 py-1 rounded-full mr-2 mb-2">
+                Prototyping
+              </span>
+              <span className="inline-block bg-black text-white text-[10px] font-medium px-3 py-1 rounded-full mr-2 mb-2">
+                Graphic Design
+              </span>
+              <span className="inline-block bg-black text-white text-[10px] font-medium px-3 py-1 rounded-full mr-2 mb-2">
+                Miro
+              </span>
+            </div>
           </div>
         </div>
         <div className="my-4 w-full">
-          <h2 className="font-bold text-lg mb-2 w-full">Volunteering</h2>
-          <div>
+          <h2 className="font-bold text-base sm:text-lg mb-2 w-full">Volunteering</h2>
+          <div className="flex flex-col space-y-4">
             <EducationCard
               logo={pb}
               collegeName="Point Blank"
@@ -243,8 +250,8 @@ function App() {
 
         </div>
         <div className='w-full mt-4'>
-          <h2 className="font-bold text-lg mb-2 w-full">Achievements</h2>
-          <div className="text-center flex flex-col items-center">
+          <h2 className="font-bold text-base sm:text-lg mb-2 w-full">Achievements</h2>
+          <div className="flex flex-col items-center space-y-4">
             <Achievements
               img={[place1]}
               title={
@@ -276,8 +283,8 @@ function App() {
         </div>
 
         <div className="my-4 w-full">
-          <h2 className="font-bold text-lg mb-2 w-full">Education</h2>
-          <div>
+          <h2 className="font-bold text-base sm:text-lg mb-2 w-full">Education</h2>
+          <div className="flex flex-col space-y-4">
             <EducationCard
               logo={dsce}
               collegeName="Dayananda Sagar College of Engineering, Bangalore"
@@ -307,7 +314,7 @@ function App() {
 
 
         <div className="my-4 w-full">
-          <h2 className="font-bold text-lg mb-2 w-full">My Skills</h2>
+          <h2 className="font-bold text-base sm:text-lg mb-2 w-full">My Skills</h2>
 
           <div>
             <HorizontalBoxes
@@ -352,18 +359,20 @@ function App() {
           </div>
         </div>
 
-        <div className='w-full mt-5'>
-          <h2 className="font-bold text-lg mb-2 w-full">Web Development Projects</h2>
-          <div className="text-center flex flex-col items-center">
-            <img src={comingsoon} alt="Project Preview" className="w-28 h-28 object-cover border border-gray-300 rounded-full" />
-            <p className="mt-3 text-gray-500 text-sm">No web dev projects right now — coming soon!</p>
-          </div>
-
+        <div className="text-center flex flex-col items-center py-8">
+          <img
+            src={comingsoon}
+            alt="Coming Soon"
+            className="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 object-cover border border-gray-300 rounded-full"
+          />
+          <p className="mt-4 text-gray-500 text-xs sm:text-sm md:text-base">
+            No web dev projects right now — coming soon!
+          </p>
         </div>
 
-        <div className='w-full mt-5'>
-          <h2 className="font-bold text-lg mb-2 w-full mt-3">Blogs & Writings</h2>
-          <div className="text-center flex justify-between">
+        <div className="flex flex-col sm:flex-row sm:flex-wrap justify-between gap-4 w-full">
+          <h2 className="font-bold text-base sm:text-lg mb-2 w-full mt-3">Blogs & Writings</h2>
+          <div className="flex flex-col sm:flex-row justify-between space-y-4 sm:space-y-0 sm:space-x-4">
             <BlogCard
               img={linkedin}
               title="LinkedIn Redesign"
@@ -399,9 +408,9 @@ function App() {
           </div>
         </div>
 
-        <div className="mt-15 bg-white text-gray-800 py-6 px-6 flex flex-col items-center rounded-lg w-full mx-auto">
-          <h2 className="text-l font-bold mb-1">Let’s Connect</h2>
-          <p className="text-xs mb-6 text-center">
+        <div className="mt-10 sm:mt-12 md:mt-15 bg-white text-gray-800 py-6 sm:py-8 px-4 sm:px-6 flex flex-col items-center rounded-lg w-full">
+          <h2 className="text-base sm:text-lg md:text-xl font-bold mb-2">Let's Connect</h2>
+          <p className="text-xs sm:text-sm text-center max-w-md">
             Open to freelance projects, internships, and collaborations. Drop me a message!
           </p>
           <Form
@@ -459,40 +468,39 @@ function App() {
       </div>
 
       <nav
-        className={`fixed top-10 w-72 h-15 shadow-lg flex flex-row items-center justify-center py-3 rounded-full border border-gray-200 ${
-          darkMode ? "bg-[#091920] text-white border border-blue-200" : "bg-white text-black border border-blue-200"
-        }`}
+        className={`fixed top-4 sm:top-6 md:top-10 left-1/2 -translate-x-1/2 w-[60%] sm:w-62 md:w-80 h-12 sm:h-14 md:h-16 shadow-lg flex flex-row items-center justify-around px-2 sm:px-3 md:px-4 py-2 rounded-full border ${darkMode ? "bg-[#091920] text-white border-blue-200" : "bg-white text-black border-blue-200"
+          } z-50`}
       >
-        <div className="mr-5 text-xl font-bold flex items-center justify-center">
-          <img src={as} alt="AS" className="h-10 w-10 rounded-full" />
+        <div className="mr-2 sm:mr-3 md:mr-5 text-xl font-bold flex items-center justify-center flex-shrink-0">
+          <img src={as} alt="AS" className="h-8 w-8 sm:h-10 sm:w-10 md:h-12 md:w-12 rounded-full object-cover" />
         </div>
 
-{[
-  { icon: home, href: "#about", label: "Home" },
-  { icon: resume, href: "https://drive.google.com/file/d/1nk1E1H2zGWcLJpu0P0i2Qb5cLRrru3PE/view?usp=sharing", label: "Resume" },
-  { icon: dribble, href: "https://dribbble.com/angelica__2004", label: "Dribbble" },
-  { icon: git, href: "https://github.com/angelica-singh-04", label: "GitHub" },
-  { icon: linkedin_link, href: "https://www.linkedin.com/in/angelica-singh-960079291/", label: "Linkedin" },
-  { icon: mode, href: "#", label: "Mode", hidden: true, onClick: toggleMode }, // hidden
-]
-  .filter(item => !item.hidden) // 👈 filter out hidden ones
-  .map((item, index) => (
-    <a
-      key={index}
-      href={item.href}
-      onClick={item.onClick}
-      className="relative group w-10 h-10 flex items-center justify-center rounded-full hover:bg-gray-300 transition-all duration-300"
-    >
-      <img
-        src={item.icon}
-        alt={item.label}
-        className={`w-4 h-4 ${darkMode ? "filter-white" : "filter-black"}`}
-      />
-      <span className="absolute top-12 bg-gray-800 dark:bg-gray-200 py-1 px-2 text-white dark:text-black text-xs rounded opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 whitespace-nowrap">
-        {item.label}
-      </span>
-    </a>
-))}
+        {[
+          { icon: home, href: "#about", label: "Home" },
+          { icon: resume, href: "https://drive.google.com/file/d/1nk1E1H2zGWcLJpu0P0i2Qb5cLRrru3PE/view?usp=sharing", label: "Resume" },
+          { icon: dribble, href: "https://dribbble.com/angelica__2004", label: "Dribbble" },
+          { icon: git, href: "https://github.com/angelica-singh-04", label: "GitHub" },
+          { icon: linkedin_link, href: "https://www.linkedin.com/in/angelica-singh-960079291/", label: "Linkedin" },
+          { icon: mode, href: "#", label: "Mode", hidden: true, onClick: toggleMode }, // hidden
+        ]
+          .filter(item => !item.hidden) // 👈 filter out hidden ones
+          .map((item, index) => (
+            <a
+              key={index}
+              href={item.href}
+              onClick={item.onClick}
+              className="relative group w-8 h-8 sm:w-10 sm:h-10 md:w-11 md:h-11 flex items-center justify-center rounded-full hover:bg-gray-300 transition-all duration-300"
+            >
+              <img
+                src={item.icon}
+                alt={item.label}
+                className={`w-3.5 h-3.5 sm:w-4 sm:h-4 md:w-5 md:h-5 ${darkMode ? "filter-white" : "filter-black"}`}
+              />
+              <span className="absolute top-10 sm:top-12 md:top-14 bg-gray-800 dark:bg-gray-200 py-1 px-2 text-white dark:text-black text-[10px] sm:text-xs rounded opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 whitespace-nowrap pointer-events-none z-10">
+                {item.label}
+              </span>
+            </a>
+          ))}
 
       </nav>
 

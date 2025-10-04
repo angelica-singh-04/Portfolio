@@ -1,24 +1,25 @@
 import React from "react";
 import Bullet from "./Bullet";
 
-
-const Webproject = ({ img, name, duration, description, btn, list = []}) => {
+const Webproject = ({ img, name, duration, description, btn, list = [] }) => {
   return (
-    <div className="flex flex-row items-center w-full my-3 border border-gray-200 rounded-[10px]">
-        <div className="w-[55%] m-5 rounded-[10px] h-max my-4">
-            <img
-            src={img}
-            alt="image"
-            className="w-full h-54 object-cover rounded-[10px] border border-gray-300"
+    <div className="flex flex-col sm:flex-row items-start sm:items-center w-full my-3 sm:my-4 border border-gray-200 rounded-lg overflow-hidden">
+      <div className="w-full sm:w-[45%] md:w-[40%] flex-shrink-0">
+        <img
+          src={img}
+          alt={name}
+          className="w-full h-48 sm:h-56 md:h-64 object-cover"
         />
-        </div>
-        <div className="flex flex-col w-[70%] text-left">
-            <span className="font-semibold text-sm">{name}</span>
-            <span className="font-medium text-xs text-gray-500">{duration}</span>
-            <Bullet list={list} />
-            <span className="font-regular text-xs my-3 text-gray-600 mr-4">{description}</span>
-            <span>{btn}</span>
-        </div>
+      </div>
+      <div className="flex flex-col w-full sm:w-[55%] md:w-[60%] text-left p-4 sm:p-5">
+        <span className="font-semibold text-sm sm:text-base">{name}</span>
+        <span className="font-medium text-xs text-gray-500 mt-1">{duration}</span>
+        <Bullet list={list} />
+        <span className="font-regular text-xs sm:text-sm my-3 text-gray-600 leading-relaxed">
+          {description}
+        </span>
+        <div className="mt-auto">{btn}</div>
+      </div>
     </div>
   );
 };
