@@ -15,7 +15,7 @@ const EducationCard = ({ logo, collegeName, course, duration }) => {
       {/* College Info */}
       <div className="w-full flex flex-col mx-3">
         <div className="text-sm font-semibold">{collegeName}</div>
-        <div className="text-xs text-gray-500 font-[Inter]">{course}</div>
+        <div className="text-sm text-gray-500 font-[Inter]">{course}</div>
       </div>
 
       {/* Duration */}
