@@ -8,7 +8,7 @@ import Form from "./components/Form";
 import Webproject from './components/Webproject';
 import ShimmerButton from "./components/ShimmerButton";
 import Achievement from './components/Achievment';
-import photo from './assets/photo.webp';
+import photo from './assets/photo.jpeg';
 import dsce from './assets/dsce.jpeg';
 import upps from './assets/upps.jpeg';
 import raj from './assets/raj.png';
@@ -37,7 +37,7 @@ import photoshop from './assets/photoshop.png';
 import illustrator from './assets/illustrator.png';
 import github from './assets/github.svg';
 import project1 from './assets/project1.png';
-// import project2 from './assets/Screen.png';
+import project2 from './assets/project2.jpeg';
 import project3 from './assets/Start.png';
 // import project4 from './assets/project4.png';
 import comingsoon from './assets/comingsoon.png';
@@ -47,7 +47,7 @@ import place2 from './assets/2nd-place.svg'
 import Achievements from './components/Achievment';
 import BlogCard from "./components/Blogcard";
 import linkedin from './assets/linkedin.webp'
-import ola from './assets/ola.png'
+import flutterkanpur from './assets/flutter-kanpur.webp'
 import git from './assets/github.png'
 import email from './assets/email.png'
 import dribble from './assets/dribble.png'
@@ -64,7 +64,7 @@ function App() {
 
   return (
     <div className={darkMode ? "bg-[#0a0a0a] flex items-center justify-center text-white min-h-screen font-[Inter]" : "bg-white text-black min-h-screen font-[Inter] flex items-center justify-center"}>
-      <div className="w-full max-w-2xl lg:max-w-3xl flex flex-col items-start text-left px-4 sm:px-6 md:px-8 lg:px-12 overflow-auto pb-24">
+      <div className="w-full max-w-2xl lg:max-w-3xl mt-40  flex flex-col items-start text-left px-4 sm:px-6 md:px-8 lg:px-12 overflow-auto pb-24">
         <span className="text-3xl sm:text-4xl md:text-5xl font-bold mb-3 mt-20 sm:mt-24 md:mt-28">
           Hi, I'm <span className='text-blue-500'>Angelica</span>
         </span>
@@ -91,6 +91,49 @@ function App() {
         </div>
         <div className='w-full mt-5'>
           <h2 className="font-bold text-base sm:text-lg md:text-xl mb-3 w-full">Design Projects</h2>
+
+          <Webproject
+            img={flutterkanpur}
+            duration={"Dec'25-Jan 2026"}
+            description={"An end-to-end UX case study where I redesigned the Flutter Kanpur app by applying user research, personas, and validation to create a clearer, more engaging community experience."}
+            name={"FlutterKanpur- App Redesign"}
+            list={["UI/UX Design", "User research","Usability testing ","Mobile app"]}
+
+            btn={
+              <a
+                href="https://www.figma.com/design/Sj5SjNWRInNYCmKM7R9rvp/Untitled?node-id=0-1&t=LJeGKNc2jwPL8Yop-1"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <ShimmerButton
+                  text="View Project"
+                  className="bg-blue-600 hover:bg-blue-700"
+                />
+              </a>
+            }
+
+          />
+          <Webproject
+            img={project2}
+            duration={"Oct-Nov 2025"}
+            description={"Curevo is a personal project where I designed a patient-focused hospital management website to make appointments, records, and care journeys easy to use. It includes a complete end-to-end flow and a scalable design system created in Figma."}
+            name={"Curevo- Web-Design"}
+            list={["Figma", "UI Design","UX Research","Design System","Web Design"]}
+
+            btn={
+              <a
+                href="https://www.figma.com/design/wViHuSB0qv2Ty40DsLj4D6/Curevo?node-id=0-1&t=6p5CIDPL4OK46u64-1"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <ShimmerButton
+                  text="View Project"
+                  className="bg-blue-600 hover:bg-blue-700"
+                />
+              </a>
+            }
+
+          />
           <Webproject
             img={project1}
             duration={"Jan 2025"}
@@ -142,9 +185,9 @@ function App() {
               logo={LazyTrunk}
               collegeName="Lazy Trunk"
               course="UI/UX Designer"
-              duration="Aug'25 - Current"
+              duration="Aug'25 - Oct'25"
             />
-            <p className='text-xs sm:text-sm text-gray-600 ml-4 sm:ml-16'><b>At Lazy Trunk</b>, I work on designing and improving the company’s websites, with a focus on clean, user-friendly, and visually engaging interfaces. I create intuitive UI/UX designs that make interactions seamless across platforms and also contribute to mobile app web design, ensuring responsive and consistent experiences on smaller screens.</p>
+            <p className='text-xs sm:text-sm text-gray-600 ml-4 sm:ml-16'><b>At Lazy Trunk,</b> I work on designing and enhancing mobile game apps, focusing on creating fun, engaging, and intuitive user experiences. I design UI/UX for various party games, ensuring visually consistent and interactive interfaces that make gameplay enjoyable and seamless across devices.</p>
             <div className="flex flex-wrap mt-2 ml-4 sm:ml-16">
               <span className="inline-block bg-black text-white text-[10px] font-medium px-3 py-1 rounded-full mr-2 mb-2">
                 Figma
@@ -358,21 +401,40 @@ function App() {
 
           </div>
         </div>
-
-        <div className="text-center flex flex-col items-center py-8">
-          <img
-            src={comingsoon}
-            alt="Coming Soon"
-            className="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 object-cover border border-gray-300 rounded-full"
-          />
-          <p className="mt-4 text-gray-500 text-xs sm:text-sm md:text-base">
-            No web dev projects right now — coming soon!
-          </p>
-        </div>
+        {/* <h2 className="font-bold text-base sm:text-lg mb-2 w-full">Web Development Projects</h2> */}
+        {/*         <div className="text-center flex flex-col items-center py-8"> */}
+        {/*           <img */}
+        {/*             src={comingsoon} */}
+        {/*             alt="Coming Soon" */}
+        {/*             className="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 object-cover border border-gray-300 rounded-full" */}
+        {/*           /> */}
+        {/*           <p className="mt-4 text-gray-500 text-xs sm:text-sm md:text-base"> */}
+        {/*             No web dev projects right now — coming soon! */}
+        {/*           </p> */}
+        {/*         </div> */}
 
         <div className="flex flex-col sm:flex-row sm:flex-wrap justify-between gap-4 w-full">
           <h2 className="font-bold text-base sm:text-lg mb-2 w-full mt-3">Blogs & Writings</h2>
           <div className="flex flex-col sm:flex-row justify-between space-y-4 sm:space-y-0 sm:space-x-4">
+
+            <BlogCard
+              img={flutterkanpur}
+              title="FLutter Kanpur Redesign"
+              description="An end-to-end UX case study where I redesigned the Flutter Kanpur app by applying user research, personas, and validation."
+              link={
+                <a
+                  href="https://medium.com/@angelicasingh2004/ui-ux-case-study-the-flutterkanpur-app-revamp-f801c97d36d7"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <ShimmerButton
+                    text="View Case Study"
+                    className="bg-blue-600 hover:bg-blue-700 mt-3"
+                  />
+                </a>
+              }
+              duration={"Jan 2026"}
+            />
             <BlogCard
               img={linkedin}
               title="LinkedIn Redesign"
@@ -393,25 +455,15 @@ function App() {
             />
 
 
-            <BlogCard
-              img={ola}
-              title="Ola App-Redesign"
-              description="A complete redesign of the Ola app with a modern UI and improved user experience, making ride booking simpler, faster, and more engaging."
-              link={<ShimmerButton
-                text="Work in Progress"
-                className="bg-gray-400 cursor-not-allowed my-3"
-                disabled
-              />}
-              duration={"April 2025- In progress"}
-            />
 
           </div>
         </div>
 
         <div className="mt-10 sm:mt-12 md:mt-15 bg-white text-gray-800 py-6 sm:py-8 px-4 sm:px-6 flex flex-col items-center rounded-lg w-full">
           <h2 className="text-base sm:text-lg md:text-xl font-bold mb-2">Let's Connect</h2>
-          <p className="text-xs sm:text-sm text-center max-w-md">
-            Open to freelance projects, internships, and collaborations. Drop me a message!
+          <p className="text-xs mb-2 text-gray-600 sm:text-sm text-center max-w-md">
+            Open to freelance projects, internships, and collaborations. Dro
+            p me a message!
           </p>
           <Form
           />
@@ -476,14 +528,14 @@ function App() {
         </div>
 
         {[
-          { icon: home, href: "#about", label: "Home" },
-          { icon: resume, href: "https://drive.google.com/file/d/1nk1E1H2zGWcLJpu0P0i2Qb5cLRrru3PE/view?usp=sharing", label: "Resume" },
+          { icon: home, href: "./", label: "Home" }, // Remove isActive prop
+          { icon: resume, href: "https://drive.google.com/file/d/1-hSW1f5nMUYO0NQ7qgfAWHBfeHkQslFF/view?usp=drivesdk", label: "Resume" },
           { icon: dribble, href: "https://dribbble.com/angelica__2004", label: "Dribbble" },
           { icon: git, href: "https://github.com/angelica-singh-04", label: "GitHub" },
           { icon: linkedin_link, href: "https://www.linkedin.com/in/angelica-singh-960079291/", label: "Linkedin" },
-          { icon: mode, href: "#", label: "Mode", hidden: true, onClick: toggleMode }, // hidden
+          { icon: mode, href: "#", label: "Mode", hidden: true, onClick: toggleMode },
         ]
-          .filter(item => !item.hidden) // 👈 filter out hidden ones
+          .filter(item => !item.hidden)
           .map((item, index) => (
             <a
               key={index}
@@ -494,7 +546,9 @@ function App() {
               <img
                 src={item.icon}
                 alt={item.label}
-                className={`w-3.5 h-3.5 sm:w-4 sm:h-4 md:w-5 md:h-5 ${darkMode ? "filter-white" : "filter-black"}`}
+                className={`w-3.5 h-3.5 sm:w-4 sm:h-4 md:w-5 md:h-5 ${item.label === "Home" ? '[filter:invert(24%)_sepia(85%)_saturate(2203%)_hue-rotate(214deg)_brightness(97%)_contrast(101%)]' :
+                    darkMode ? "filter-white" : "filter-black"
+                  }`}
               />
               <span className="absolute top-10 sm:top-12 md:top-14 bg-gray-800 dark:bg-gray-200 py-1 px-2 text-white dark:text-black text-[10px] sm:text-xs rounded opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 whitespace-nowrap pointer-events-none z-10">
                 {item.label}
