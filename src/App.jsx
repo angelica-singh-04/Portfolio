@@ -56,6 +56,7 @@ import home from './assets/home.png'
 import resume from './assets/resume.png'
 import mode from './assets/mode.png'
 import as from './assets/AS.png'
+import zenith from './assets/zenith.png'
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
@@ -91,6 +92,28 @@ function App() {
         </div>
         <div className='w-full mt-5'>
           <h2 className="font-bold text-base sm:text-lg md:text-xl mb-3 w-full">Design Projects</h2>
+
+          <Webproject
+            img={zenith}
+            duration={"Jan 2026"}
+            description={"Created event assets: stickers, ID badges, t-shirts, standees, certificates, presentation decks, and social media graphics in a bold cosmic theme to energize the 24-hour experience."}
+            name={"Zenith"}
+            list={["Visual Design", "Branding","Digital and Print Assets","Collaterals"]}
+
+            btn={
+              <a
+                href="https://drive.google.com/file/d/1QC6Dm7WqV2lIbJiXHw6cLT-EG2uiHPgt/view?usp=sharing"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <ShimmerButton
+                  text="View Project"
+                  className="bg-blue-600 hover:bg-blue-700"
+                />
+              </a>
+            }
+
+          />
 
           <Webproject
             img={flutterkanpur}

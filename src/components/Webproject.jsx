@@ -8,7 +8,7 @@ const Webproject = ({ img, name, duration, description, btn, list = [] }) => {
         <img
           src={img}
           alt={name}
-          className="w-full h-48 sm:h-56 md:h-64 object-cover"
+          className="w-full h-48 sm:h-56 md:h-64 object-cover rounded"
         />
       </div>
       <div className="flex flex-col w-full sm:w-[55%] md:w-[60%] text-left p-4 sm:p-5">
