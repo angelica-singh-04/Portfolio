@@ -1,10 +1,11 @@
+// src/components/Form.js
 import React, { useState } from "react";
 
 export default function Form() {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
-    message: "", 
+    message: "",
   });
 
   const [status, setStatus] = useState({
@@ -28,8 +29,8 @@ export default function Form() {
     });
 
     try {
-      // Ensure this URL matches your backend port (usually 5000)
-      const response = await fetch("http://localhost:5000/api/form", {
+      // UPDATED: Points to the Vercel API route
+      const response = await fetch("/api/contact", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -42,17 +43,18 @@ export default function Form() {
           submitting: false,
           info: { error: false, msg: "Message sent successfully!" },
         });
-        setFormData({ name: "", email: "", message: "" }); 
+        setFormData({ name: "", email: "", message: "" });
       } else {
+        const data = await response.json();
         setStatus({
           submitting: false,
-          info: { error: true, msg: "Failed to send message. Please try again." },
+          info: { error: true, msg: data.message || "Failed to send message." },
         });
       }
     } catch (error) {
       setStatus({
         submitting: false,
-        info: { error: true, msg: "Error connecting to server." },
+        info: { error: true, msg: "An error occurred. Please try again later." },
       });
     }
   };
@@ -78,7 +80,7 @@ export default function Form() {
         className="p-2 rounded-lg border border-gray-300 focus:outline-none focus:border-blue-600 text-xs"
       />
       <textarea
-        name="message" 
+        name="message"
         placeholder="Your Message"
         value={formData.message}
         onChange={handleChange}
