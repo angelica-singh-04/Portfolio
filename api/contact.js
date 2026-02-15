@@ -12,7 +12,7 @@ const MONGODB_URI = process.env.MONGODB_URI;
 // --- 2. SETUP NODEMAILER ---
 const transporter = nodemailer.createTransport({
   host: SMTP_HOST,
-  port: 465,
+  port: parseInt(process.env.SMTP_PORT) || 465,
   secure: true,
   auth: {
     user: SMTP_USER,
