@@ -51,12 +51,15 @@ import flutterkanpur from './assets/flutter-kanpur.webp'
 import git from './assets/github.png'
 import email from './assets/email.png'
 import dribble from './assets/dribble.png'
+import behance from './assets/behance (3).svg'
+
 import linkedin_link from './assets/linkedin_link.png'
 import home from './assets/home.png'
 import resume from './assets/resume.png'
 import mode from './assets/mode.png'
 import as from './assets/AS.png'
 import zenith from './assets/zenith.png'
+import { FaBehance } from 'react-icons/fa';
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
@@ -526,12 +529,12 @@ function App() {
             </a>
 
             <a
-              href="https://dribbble.com/angelica__2004"
+              href="https://www.behance.net/angelica21"
               className="w-6 h-6 rounded-full overflow-hidden flex items-center justify-center bg-gray-100 hover:bg-gray-200 transition"
             >
               <img
-                src={dribble}
-                alt="dribbble"
+                src={behance}
+                alt="behance"
                 className="w-6 h-6"
               />
             </a>
@@ -553,7 +556,7 @@ function App() {
         {[
           { icon: home, href: "./", label: "Home" }, // Remove isActive prop
           { icon: resume, href: "https://drive.google.com/file/d/1-hSW1f5nMUYO0NQ7qgfAWHBfeHkQslFF/view?usp=drivesdk", label: "Resume" },
-          { icon: dribble, href: "https://dribbble.com/angelica__2004", label: "Dribbble" },
+          { icon: behance, href: "https://www.behance.net/angelica21", label: "Behance" },
           { icon: git, href: "https://github.com/angelica-singh-04", label: "GitHub" },
           { icon: linkedin_link, href: "https://www.linkedin.com/in/angelica-singh-960079291/", label: "Linkedin" },
           { icon: mode, href: "#", label: "Mode", hidden: true, onClick: toggleMode },
